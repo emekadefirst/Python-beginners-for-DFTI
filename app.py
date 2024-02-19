@@ -1,17 +1,21 @@
 # greetings
 print("Good day, Welcome to our resturant...")
 print("How much is your total purchase")
+
 # collect purchaase cost
 purchase_cost = float(input("$ "))
+
 # Ask for payment type
 print("What kind of Payment are you making")
 print("a. Cash payment")
 print("b. Bank payment")
+
 # collect payment type
-reply = str(input())
+reply = str(input()).lower()
 
 # logic for cash
-if reply == "a":
+if reply == "a" and reply == "cash payment":
+    print("cash payment")
     cash = int(input("How much cash are you paying "))
     tip = 0.03 * purchase_cost
     print(f"We'll charge 3% of what you bought which is {tip}")
@@ -41,7 +45,8 @@ if reply == "a":
         print("invalid request")
 
 # logic for bank 
-elif reply == "b":
+elif reply == "b" or reply == "bank payment":
+    print("Bank Payment")
     tip = 0.03 * purchase_cost
     print(f"We'll charge 3% of what you bought which is {tip}")
     total_cost = tip + purchase_cost

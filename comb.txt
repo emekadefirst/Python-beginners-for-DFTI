@@ -1,0 +1,6 @@
+ab = pepsi + mirinda
+bc = mirinda + seven_up
+bd = mirinda + coke
+cd = seven_up + coke
+ad = pepsi + coke
+ca = seven_up + pepsi
