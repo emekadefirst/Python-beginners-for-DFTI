@@ -19,7 +19,7 @@ if res < 400:
         else:
             print(f"your change is ${balance}")
     elif reply == "2" or reply == "ikotun":
-        balance = ikotun - res
+        balance =  res - ikotun 
         if balance == 0:
             print("you no get change")
         else:

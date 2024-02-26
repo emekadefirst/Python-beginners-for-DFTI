@@ -64,7 +64,7 @@ elif product == "7up and pepsi" or product == "10":
     total_cost = ca * quantity
     print(f"Your total cost is NGN{total_cost}")
 else:
-    print("Invalid shop request")
+    print("Invalid request")
 print("What type of payment are your making\n1. Cash payment\n2. Bank payment")
 reply = str(input(">> "))
 if reply == "1" or reply == "cash payment":

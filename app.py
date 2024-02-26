@@ -1,69 +1,19 @@
-# greetings
-print("Good day, Welcome to our resturant...")
-print("How much is your total purchase")
+import random as r
+import string as s
 
-# collect purchaase cost
-purchase_cost = float(input("$ "))
 
-# Ask for payment type
-print("What kind of Payment are you making")
-print("a. Cash payment")
-print("b. Bank payment")
+ul = s.ascii_uppercase
+ll = s.ascii_lowercase
+punctuation = s.punctuation
 
-# collect payment type
-reply = str(input()).lower()
+first_letter = ''.join(r.sample(ul, 4))
+second_letter = ''.join(r.sample(ll, 4))
 
-# logic for cash
-if reply == "a" and reply == "cash payment":
-    print("cash payment")
-    cash = int(input("How much cash are you paying "))
-    tip = 0.03 * purchase_cost
-    print(f"We'll charge 3% of what you bought which is {tip}")
-    total_cost = tip + purchase_cost
-    print("Are making a joint paymment or single payment")
-    print("a. Single payment")
-    print("b. Joint payment")
-    response = input("")
-    if response == "a":
-        tip = 0.03 * purchase_cost
-        print(f"We'll charge 3% of what you bought which is {tip}")
-        total_cost = tip + purchase_cost
-        print(f"Your total cost is {total_cost}")
-        balance = cash - total_cost
-        print(f"Your balance is {balance}")
-    elif response == "b":
-        print("How many of you are paying")
-        number = int(input())
-        payment = total_cost / number
-        print(f"You all are to pay ${payment} each")
-        balance = cash - total_cost
-        if balance == 0:
-            print("You don not have any balance with us")
-        else:
-            print(f"Your payment was collected successfully and your balance is {balance}")
-    else:
-        print("invalid request")
+comma = ''.join(r.sample(punctuation, 4))
+all_value = first_letter + second_letter + comma
+password = list(all_value)
+r.shuffle(password)
 
-# logic for bank 
-elif reply == "b" or reply == "bank payment":
-    print("Bank Payment")
-    tip = 0.03 * purchase_cost
-    print(f"We'll charge 3% of what you bought which is {tip}")
-    total_cost = tip + purchase_cost
-    print("Are making a joint paymment or single payment")
-    print("a. Single payment")
-    print("b. Joint payment")
-    response = input("")
-    if response == "a":
-        print(f"Your total cost is {total_cost}")
-    elif response == "b":
-        print("How many of you are paying")
-        number = int(input())
-        payment = total_cost / number
-        print(f"You all are to pay ${payment} each")
-    else:
-        print("invalid request")
-else:
-    print("invalid request")       
-# close greeting
-print("Thanks for buying from us ❤️")
+shuffled_password = ''.join(password)
+print(shuffled_password)
+    
