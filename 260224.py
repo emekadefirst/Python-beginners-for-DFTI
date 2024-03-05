@@ -3,17 +3,17 @@
 # fruit.append('grape')
 # print(fruit)
 
-# # CLEAR
+# CLEAR
 # fruit = ['orange', 'apple', 'banana']
 # fruit.clear()
 # print(fruit)
 
 
-# # POPPING
-# my_list = [1, 2, 3]
+# POPPING
+# my_list = [1, 2, 3, 4]
 # print(my_list.pop()) 
 #   # Output: 3
-# # print(my_list)         # Output: [1, 2]
+# print(my_list)         # Output: [1, 2]
 
 # my_list = [1, 2, True, "a"]
 # index = my_list.index("a")
@@ -30,9 +30,8 @@
 # print(copied_list)  # Output: [1, 2, 3]
 
 
-my_list = [1, 2, 3, 2]
-my_list.remove(my_list[4])
-print(my_list)  # Output: [1, 3, 2]
+my_list = 1, 2, 3, 4, 5
+print(type(my_list))
 
 
 
