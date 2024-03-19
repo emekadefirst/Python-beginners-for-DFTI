@@ -16,4 +16,3 @@ def gen_pass():
 
     shuffled_password = ''.join(password)
     return shuffled_password
-    
